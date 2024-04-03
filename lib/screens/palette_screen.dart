@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:surf_flutter_courses_template/Components/color_card.dart';
 import 'package:surf_flutter_courses_template/DataAccess/i_color_repository.dart';
 import 'package:surf_flutter_courses_template/Models/color_dto.dart';
