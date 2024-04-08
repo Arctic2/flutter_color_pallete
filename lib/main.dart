@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:surf_flutter_courses_template/DataAccess/mock_color_repository.dart';
+import 'package:surf_flutter_courses_template/data_access/i_color_repository.dart';
+import 'package:surf_flutter_courses_template/data_access/mock_color_repository.dart';
 import 'package:surf_flutter_courses_template/screens/palette_screen.dart';
 import 'package:surf_flutter_courses_template/theme.dart';
 
 void main() {
-  runApp(const MainApp());
+  var repo = MockColorRepository();
+  runApp(MainApp(repo: repo));
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  final IColorRepository _repo;
+  const MainApp({super.key, required IColorRepository repo}) : _repo = repo;
 
   @override
   Widget build(BuildContext context) {
-    var repo = MockColorRepository();
-
     return MaterialApp(
       theme: AppTheme.lightTheme,
       home: PaletteScreen(
-        repository: repo,
+        repository: _repo,
       ),
     );
   }

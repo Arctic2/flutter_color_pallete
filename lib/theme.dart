@@ -23,9 +23,9 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
-          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
           surfaceTintColor: Colors.white,
-          shadowColor: Color.fromARGB(255, 0, 0, 0),
+          shadowColor: const Color.fromARGB(255, 0, 0, 0),
           elevation: 1,
         ),
       ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:surf_flutter_courses_template/Components/color_card.dart';
-import 'package:surf_flutter_courses_template/DataAccess/i_color_repository.dart';
-import 'package:surf_flutter_courses_template/Models/color_dto.dart';
+import 'package:surf_flutter_courses_template/components/color_card.dart';
+import 'package:surf_flutter_courses_template/models/color_dto.dart';
+import 'package:surf_flutter_courses_template/data_access/i_color_repository.dart';
 
 class PaletteScreen extends StatelessWidget {
   final IColorRepository _repository;
