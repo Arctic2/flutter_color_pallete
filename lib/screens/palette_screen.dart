@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:surf_flutter_courses_template/assets/app_strings.dart';
 import 'package:surf_flutter_courses_template/components/color_card.dart';
 import 'package:surf_flutter_courses_template/models/color_dto.dart';
 import 'package:surf_flutter_courses_template/data_access/i_color_repository.dart';
@@ -16,7 +17,7 @@ class PaletteScreen extends StatelessWidget {
         title: SafeArea(
           child: SizedBox(
             height: 100,
-            child: Text("Эксклюзивная палитра\n«Colored Box»", style: theme.textTheme.bodyLarge),
+            child: Text(AppStrings.title, style: theme.textTheme.bodyLarge),
           ),
         ),
       ),
@@ -27,13 +28,13 @@ class PaletteScreen extends StatelessWidget {
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 if (snapshot.data!.isEmpty) {
-                  return const Text('Не найдено ни одного цвета');
+                  return const Text(AppStrings.isEmpty);
                 }
                 return ColorGrid(
                   colors: snapshot.data!,
                 );
               } else if (snapshot.hasError) {
-                return const Text('Error');
+                return const Text(AppStrings.error);
               } else {
                 return const Center(
                   child: SizedBox(

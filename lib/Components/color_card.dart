@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:surf_flutter_courses_template/assets/app_strings.dart';
 import 'package:surf_flutter_courses_template/models/color_dto.dart';
 import 'package:surf_flutter_courses_template/screens/color_details_screen.dart';
 import 'package:surf_flutter_courses_template/utils/copy_helper.dart';
@@ -33,7 +34,7 @@ class ColorCard extends StatelessWidget {
                 );
               },
               onLongPress: () async {
-                await CopyHelper.copyWitchSnackbar(context, _colorDto.hex, "Hex скопирован");
+                await CopyHelper.copyWitchSnackbar(context, _colorDto.hex, AppStrings.hexCopied);
               },
               child: const SizedBox(
                 height: 100,

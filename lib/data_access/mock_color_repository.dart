@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:surf_flutter_courses_template/assets/app.assets.dart';
 import 'package:surf_flutter_courses_template/models/color_dto.dart';
 import 'package:surf_flutter_courses_template/data_access/i_color_repository.dart';
 
@@ -21,6 +22,6 @@ class MockColorRepository implements IColorRepository {
   }
 
   Future<String> loadJson() async {
-    return await rootBundle.loadString('assets/colors.json');
+    return await rootBundle.loadString(AppAssets.colorList);
   }
 }

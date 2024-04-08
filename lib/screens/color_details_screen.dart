@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:surf_flutter_courses_template/assets/app_strings.dart';
 import 'package:surf_flutter_courses_template/components/details_button.dart';
 import 'package:surf_flutter_courses_template/models/color_dto.dart';
 import 'package:surf_flutter_courses_template/utils/copy_helper.dart';
@@ -59,7 +60,7 @@ class ColorDetailsScreen extends StatelessWidget {
                   ],
                 ),
                 onPressed: () async {
-                  await CopyHelper.copyWitchSnackbar(context, _colorDto.hex, "Hex скопирован");
+                  await CopyHelper.copyWitchSnackbar(context, _colorDto.hex, AppStrings.hexCopied);
                 },
               ),
               const SizedBox(
@@ -71,19 +72,19 @@ class ColorDetailsScreen extends StatelessWidget {
                   DetailButton(
                     child: Text("Red ${color.red}"),
                     onPressed: () async {
-                      await CopyHelper.copyWitchSnackbar(context, color.red.toString(), "Red скопирован");
+                      await CopyHelper.copyWitchSnackbar(context, color.red.toString(), AppStrings.redCopied);
                     },
                   ),
                   DetailButton(
                     child: Text("Green ${color.green}"),
                     onPressed: () async {
-                      await CopyHelper.copyWitchSnackbar(context, color.green.toString(), "Green скопирован");
+                      await CopyHelper.copyWitchSnackbar(context, color.green.toString(), AppStrings.greenCopied);
                     },
                   ),
                   DetailButton(
                     child: Text("Blue ${color.blue}"),
                     onPressed: () async {
-                      await CopyHelper.copyWitchSnackbar(context, color.blue.toString(), "Blue скопирован");
+                      await CopyHelper.copyWitchSnackbar(context, color.blue.toString(), AppStrings.blueCopied);
                     },
                   ),
                 ],
